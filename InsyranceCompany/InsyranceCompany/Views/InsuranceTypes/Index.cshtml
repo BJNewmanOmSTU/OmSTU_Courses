@@ -1,25 +1,25 @@
 ﻿@model IEnumerable<InsyranceCompany.InsuranceType>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Виды страхования";
 }
 
-<h1>Index</h1>
+    <h1>Виды страхования</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Создать новый</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.InsuranceName)
+                Вид страхования
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.InsuranceSummary)
+                Страховая сумма
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TarifRate)
+                Тарифная ставка
             </th>
             <th></th>
         </tr>
@@ -37,9 +37,9 @@
                 @Html.DisplayFor(modelItem => item.TarifRate)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.InsuranceTypeId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.InsuranceTypeId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.InsuranceTypeId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.InsuranceTypeId">Изменить</a> |
+                <a asp-action="Details" asp-route-id="@item.InsuranceTypeId">Описание</a> |
+                <a asp-action="Delete" asp-route-id="@item.InsuranceTypeId">Удалить</a>
             </td>
         </tr>
 }

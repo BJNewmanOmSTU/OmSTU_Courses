@@ -1,47 +1,47 @@
 ﻿@model InsyranceCompany.Contracts
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Создать";
 }
 
-<h1>Create</h1>
+<h1>Создать контракт</h1>
 
-<h4>Contracts</h4>
+<h4>Контракт</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="InsuranceTypeId" class="control-label"></label>
+                <label asp-for="InsuranceTypeId" class="control-label">Вид страхования</label>
                 <select asp-for="InsuranceTypeId" class ="form-control" asp-items="ViewBag.InsuranceTypeId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="DateConclusion" class="control-label"></label>
+                <label asp-for="DateConclusion" class="control-label">Дата заключения</label>
                 <input asp-for="DateConclusion" class="form-control" />
                 <span asp-validation-for="DateConclusion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Payment" class="control-label"></label>
+                <label asp-for="Payment" class="control-label">Оплата</label>
                 <input asp-for="Payment" class="form-control" />
                 <span asp-validation-for="Payment" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AgentId" class="control-label"></label>
+                <label asp-for="AgentId" class="control-label">Агент</label>
                 <select asp-for="AgentId" class ="form-control" asp-items="ViewBag.AgentId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="ClientId" class="control-label"></label>
+                <label asp-for="ClientId" class="control-label">Клиент</label>
                 <select asp-for="ClientId" class ="form-control" asp-items="ViewBag.ClientId"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Создать" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Обратно к списку</a>
 </div>
 

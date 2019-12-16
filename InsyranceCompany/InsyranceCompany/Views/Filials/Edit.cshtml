@@ -1,12 +1,12 @@
 ﻿@model InsyranceCompany.Filials
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Изменить";
 }
 
-<h1>Edit</h1>
+    <h1>Изменить</h1>
 
-<h4>Filials</h4>
+<h4>Филиал</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,23 +14,23 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="FilialId" />
             <div class="form-group">
-                <label asp-for="FilialAddress" class="control-label"></label>
+                <label asp-for="FilialAddress" class="control-label">Адрес</label>
                 <input asp-for="FilialAddress" class="form-control" />
                 <span asp-validation-for="FilialAddress" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FilialPhone" class="control-label"></label>
+                <label asp-for="FilialPhone" class="control-label">Телефон</label>
                 <input asp-for="FilialPhone" class="form-control" />
                 <span asp-validation-for="FilialPhone" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Обратно к списку</a>
 </div>
 

@@ -1,42 +1,41 @@
 ﻿@model InsyranceCompany.Clients
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Удалить";
 }
 
-<h1>Delete</h1>
+<h1>Удалить</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Вы действительно хотите удалить?</h3>
 <div>
-    <h4>Clients</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CName)
+            Имя
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CName)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CPatronymic)
+            Отчество
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CPatronymic)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CSurname)
+            Фамилия
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CSurname)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BirthYear)
+            Дата рождения
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.BirthYear)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CPhone)
+            Телефон
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CPhone)
@@ -45,7 +44,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="ClientId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-action="Index">Обратно к списку</a>
     </form>
 </div>

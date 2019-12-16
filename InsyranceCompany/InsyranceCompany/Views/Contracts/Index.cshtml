@@ -1,31 +1,22 @@
 ﻿@model IEnumerable<InsyranceCompany.Contracts>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Контракты";
 }
 
-<h1>Index</h1>
+    <h1>Контракты</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Создать новый</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.DateConclusion)
+                Дата заключения
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Payment)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Agent)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Client)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.InsuranceType)
+               Оплата
             </th>
             <th></th>
         </tr>
@@ -40,18 +31,9 @@
                 @Html.DisplayFor(modelItem => item.Payment)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Agent.AgentId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Client.ClientId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InsuranceType.InsuranceTypeId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ContractId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ContractId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ContractId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.ContractId">Изменить</a> |
+                <a asp-action="Details" asp-route-id="@item.ContractId">Подробнее</a> |
+                <a asp-action="Delete" asp-route-id="@item.ContractId">Удалить</a>
             </td>
         </tr>
 }

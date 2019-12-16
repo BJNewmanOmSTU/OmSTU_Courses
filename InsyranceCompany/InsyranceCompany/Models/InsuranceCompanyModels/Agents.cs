@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace InsyranceCompany
 {
@@ -12,7 +13,7 @@ namespace InsyranceCompany
 
         public int AgentId { get; set; }
         public int FilialId { get; set; }
-        public string AName { get; set; }
+		public string AName { get; set; }
         public string APatronymic { get; set; }
         public string ASurname { get; set; }
         public string AAddress { get; set; }

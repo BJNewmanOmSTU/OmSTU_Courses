@@ -1,31 +1,25 @@
 ﻿@model IEnumerable<InsyranceCompany.Clients>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Клиенты";
 }
 
-<h1>Index</h1>
+<h1>Список клиентов</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Добавить нового клиента</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CName)
+                ФИО
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CPatronymic)
+                Дата рождения
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CSurname)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BirthYear)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CPhone)
+                Телефон
             </th>
             <th></th>
         </tr>
@@ -34,13 +28,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.CName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CPatronymic)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CSurname)
+                @{
+                    var fio = $"{item.CSurname} {item.CName} {item.CPatronymic}";
+                    @fio
+                }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.BirthYear)
@@ -49,9 +40,9 @@
                 @Html.DisplayFor(modelItem => item.CPhone)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ClientId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ClientId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ClientId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.ClientId">Изменить</a> |
+                <a asp-action="Details" asp-route-id="@item.ClientId">Подробнее</a> |
+                <a asp-action="Delete" asp-route-id="@item.ClientId">Удалить</a>
             </td>
         </tr>
 }

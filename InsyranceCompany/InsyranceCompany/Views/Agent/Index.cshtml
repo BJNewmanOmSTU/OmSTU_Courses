@@ -1,71 +1,51 @@
 ﻿@model IEnumerable<InsyranceCompany.Agents>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Агенты";
 }
 
-<h1>Index</h1>
+<h1>Список агентов компании</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Создать нового агента</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.AName)
+                ФИО
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.APatronymic)
+                Адрес
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ASurname)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AAddress)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.APhone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Salary)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Filial)
+                Номер телефона
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.APatronymic)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ASurname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AAddress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.APhone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Salary)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Filial.FilialId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.AgentId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.AgentId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.AgentId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @{
+                        var fio = $"{item.ASurname} {item.AName} {item.APatronymic}";
+                        @fio
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.APhone)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.AgentId">Изменить</a> |
+                    <a asp-action="Details" asp-route-id="@item.AgentId">Подробнее</a> |
+                    <a asp-action="Delete" asp-route-id="@item.AgentId">Удалить</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

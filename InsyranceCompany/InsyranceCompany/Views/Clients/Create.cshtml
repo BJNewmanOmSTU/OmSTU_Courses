@@ -1,50 +1,50 @@
 ﻿@model InsyranceCompany.Clients
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Добавить";
 }
 
-<h1>Create</h1>
+    <h1>Добавить клиента</h1>
 
-<h4>Clients</h4>
+<h4>Клиент</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="CName" class="control-label"></label>
+                <label asp-for="CName" class="control-label">Имя</label>
                 <input asp-for="CName" class="form-control" />
                 <span asp-validation-for="CName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CPatronymic" class="control-label"></label>
+                <label asp-for="CPatronymic" class="control-label">Отчество</label>
                 <input asp-for="CPatronymic" class="form-control" />
                 <span asp-validation-for="CPatronymic" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CSurname" class="control-label"></label>
+                <label asp-for="CSurname" class="control-label">Фамилия</label>
                 <input asp-for="CSurname" class="form-control" />
                 <span asp-validation-for="CSurname" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="BirthYear" class="control-label"></label>
+                <label asp-for="BirthYear" class="control-label">Дата рождения</label>
                 <input asp-for="BirthYear" class="form-control" />
                 <span asp-validation-for="BirthYear" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CPhone" class="control-label"></label>
+                <label asp-for="CPhone" class="control-label">Телефон</label>
                 <input asp-for="CPhone" class="form-control" />
                 <span asp-validation-for="CPhone" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Добавить" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Обратно к списку</a>
 </div>
 

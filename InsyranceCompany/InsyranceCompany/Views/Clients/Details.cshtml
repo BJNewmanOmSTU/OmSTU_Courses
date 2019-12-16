@@ -1,41 +1,41 @@
 ﻿@model InsyranceCompany.Clients
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Описание";
 }
 
-<h1>Details</h1>
+<h1>Описание</h1>
 
 <div>
-    <h4>Clients</h4>
+    <h4>Клиента</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CName)
+            Имя
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CName)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CPatronymic)
+            Отчество
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CPatronymic)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CSurname)
+            Фамилия
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CSurname)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BirthYear)
+            Дата рождения
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.BirthYear)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CPhone)
+            Телефон
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CPhone)
@@ -43,6 +43,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.ClientId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.ClientId">Изменить</a> |
+    <a asp-action="Index">Обратно к списку</a>
 </div>

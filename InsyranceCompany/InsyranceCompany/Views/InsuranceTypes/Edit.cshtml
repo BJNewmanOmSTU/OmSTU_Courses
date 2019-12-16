@@ -1,12 +1,12 @@
 ﻿@model InsyranceCompany.InsuranceType
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Изменить";
 }
 
-<h1>Edit</h1>
+<h1>Изменить</h1>
 
-<h4>InsuranceType</h4>
+<h4>Вид страхования</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,28 +14,28 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="InsuranceTypeId" />
             <div class="form-group">
-                <label asp-for="InsuranceName" class="control-label"></label>
+                <label asp-for="InsuranceName" class="control-label">Вид страхования</label>
                 <input asp-for="InsuranceName" class="form-control" />
                 <span asp-validation-for="InsuranceName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="InsuranceSummary" class="control-label"></label>
+                <label asp-for="InsuranceSummary" class="control-label">Страховая сумма</label>
                 <input asp-for="InsuranceSummary" class="form-control" />
                 <span asp-validation-for="InsuranceSummary" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TarifRate" class="control-label"></label>
+                <label asp-for="TarifRate" class="control-label">Тарифная ставка</label>
                 <input asp-for="TarifRate" class="form-control" />
                 <span asp-validation-for="TarifRate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Обратно к списку</a>
 </div>
 
