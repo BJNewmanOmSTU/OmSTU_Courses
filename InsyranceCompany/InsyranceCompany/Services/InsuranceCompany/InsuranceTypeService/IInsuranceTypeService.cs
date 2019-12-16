@@ -11,6 +11,6 @@ namespace InsyranceCompany.Services.InsuranceCompany.InsuranceTypeService
 		public Task<InsuranceType> GetInsuranceType(int id);
 		public List<InsuranceType> GetListInsuranceType();
 		public void DeleteInsuranceType(InsuranceType type);
-		public void DeleteInsuranceType(int id);		
+		public Task<InsuranceType> DeleteInsuranceType(int id);		
 	}
 }

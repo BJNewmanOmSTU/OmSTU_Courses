@@ -7,12 +7,12 @@ namespace InsyranceCompany.Services.InsuranceCompany.AgentsService
 {
 	public interface IAgentService
 	{
-		public void CreateAgent(Agents agent);
-		public Task<Agents> GetAgent(int id);
+		public Task CreateAgent(Agents agent);
+		public Task<Agents> GetAgent(int? id);
 
-		public List<Agents> GetAgents();
+		public Task<List<Agents>> GetAgents();
 
-		public void DeleteAgent(int id);
+		public Task<Agents> DeleteAgent(int id);
 		public void DeleteAgent(Agents agent);
 	}
 }

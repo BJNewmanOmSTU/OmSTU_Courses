@@ -21,7 +21,6 @@ namespace InsyranceCompany.Controllers
 
 		public IActionResult Index()
 		{
-			var i = _context.Agents.Count();
 			return View();
 		}
 

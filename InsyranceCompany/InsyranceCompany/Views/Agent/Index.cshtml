@@ -1,0 +1,71 @@
+﻿@model IEnumerable<InsyranceCompany.Agents>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.APatronymic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ASurname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.APhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Filial)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.APatronymic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ASurname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.APhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Filial.FilialId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AgentId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AgentId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AgentId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

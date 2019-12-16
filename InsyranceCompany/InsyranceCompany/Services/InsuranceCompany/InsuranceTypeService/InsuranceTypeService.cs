@@ -25,17 +25,19 @@ namespace InsyranceCompany.Services.InsuranceCompany.InsuranceTypeService
 			_context.InsuranceType.Remove(type);
 		}
 
-		public async void DeleteInsuranceType(int id)
+		public async Task<InsuranceType> DeleteInsuranceType(int id)
 		{
 			try
 			{
 				InsuranceType type = await _context.InsuranceType.FindAsync(id);
 				_context.InsuranceType.Remove(type);
 				await _context.SaveChangesAsync();
+
+				return type;
 			}
 			catch (Exception)
 			{
-
+				return null;
 			}
 		}
 
